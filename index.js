@@ -5,6 +5,7 @@ var cors = require('cors');
 app.use(cors({ optionsSuccessStatus: 200 }));
 
 
+// Request Header Parser Challenge
 app.get('/api/whoami', function (req, res) {
 
     res.json({
@@ -13,4 +14,8 @@ app.get('/api/whoami', function (req, res) {
         "software": req.headers["user-agent"]
     });
 
+});
+
+app.listen(3000, () => {
+    console.log('App Listening in Port: ', 3000);
 })
